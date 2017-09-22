@@ -4,7 +4,7 @@ function translate(input) {
   var possibleResults = ["ping", "pong", "ping-pong"];
   var userResult = "";
   var results = input.toString();
-  for (var i=0; i < possibleResults.length; i++) {
+  for (var i=0; i < input.length; i++) {
       userResult = possibleResults[i][parseInt(results[i])] + userResult;
   }
   return userResult;
