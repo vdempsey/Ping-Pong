@@ -1,13 +1,14 @@
 //business logic
-
 function translate(input) {
-  var possibleResults = ["ping", "pong", "ping-pong"];
-  var userResult = "";
-  var results = input.toString();
-  for (var i=0; i < input.length; i++) {
-      userResult = possibleResults[i][parseInt(results[i])] + userResult;
+  if (input % 15 === 0) {
+    return "ping-pong";
+  } else if (input % 3 === 0) {
+      return "ping";
+  } else if (input % 5 === 0) {
+      return "pong";
+  } else {
+      return input;
   }
-  return userResult;
 };
 
 
@@ -15,33 +16,17 @@ function translate(input) {
 $(document).ready(function() {
   $("form#formPingPong").submit(function(event) {
     event.preventDefault();
-    var input = $("#input").val();
-    var userResult = translate(input);
-    var ping = parseInt(input) % 3;
-    var pong = parseInt(input) % 5;
-    var pingPong = parseInt(input) % 15;
-    var number = parseInt(input);
-    var zeroOrBelow = parseInt(input);
-    if (input <= 0) {
-      alert("Please enter the number greater than 0");
-    } else if (pingPong === 0 && input > 0) {
-      $("ul").prepend($(".ping").push(userResult));
-      $("#result").show();
-      //$(".pingPong").text(userResult.charAt(2));
-      //alert("PingPong!");//to check it this whole thing works
-    //} else if (pong === 0 && input > 0) {
-    //  $("ul").prepend($(".ping").push(userResult));
-    //  $("#result").show();
-      //alert("Pong!");
-      //$("#result").show();
-      //$(".pong").text(userResult.charAt(0)).show();
-    } else if (ping === 0 && input > 0) {
-      alert("Ping");
-    } else if (input > 0) {
-      alert("your number is ...");
+    var input = parseFloat($("#input").val());
+    if (input % 1 !== 0) {
+      alert("Enter an integer greater than zero!"); //in case the user disregards initial directions.
+    } else {
+        for (var rangeIndex =0; rangeIndex <= input; rangeIndex++) {
+        var userResult = translate(rangeIndex);
+        $("ul").append("Testing");
+        $("#result").show();
+      }
     }
 
-    //$("#result").show();
     //$("li").prepend($(".ping").text(userResult()));
 
   });
