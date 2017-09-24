@@ -7,27 +7,27 @@ function translate(input) {
   } else if (input % 5 === 0) {
       return "pong";
   } else {
-      return input;
+      return input; // for any integer greater than 0
   }
 };
-
 
 //user logic
 $(document).ready(function() {
   $("form#formPingPong").submit(function(event) {
-    event.preventDefault();
+  //  event.preventDefault();
     var input = parseFloat($("#input").val());
     if (input % 1 !== 0) {
       alert("Enter an integer greater than zero!"); //in case the user disregards initial directions.
     } else {
+        $("ul.results-list").empty();
         for (var numberRange =1; numberRange <= input; numberRange++) {
         var userResult = translate(numberRange);
         $("ul.results-list").append("<li>" + translate(numberRange) + "</li>");
       }
       $("#result").show();
+      $("#reminder").show();
+      $("#rules").hide();
     }
-
-    //$("li").prepend($(".ping").text(userResult()));
-
+      event.preventDefault();
   });
 });

@@ -10,28 +10,47 @@
   </head>
   <body>
     <div class="container">
-      <div id="header">
-        <h1>Let's Play Some Ping Pong</h1>
-        <p>
-          Some intro paragraph goes here, describing how to play.
-        </p>
+      <div class="banner">
+        <img src="img/top-banner.jpg" alt="Ping-Pong">
       </div>
-      <div id="program">
-        <div class="formPingPong">
-          <h2>Possible headline goes here</h2>
-          <form id="formPingPong">
-            <div class="form-group">
-              <label type="text">Enter a number to transform:</label>
-              <input id="input">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div id="program">
+            <div class="formPingPong">
+              <h1>Create a ping pong rythm</h1>
+              <form id="formPingPong">
+                <div class="form-group">
+                  <label type="text">Enter a number to transform:</label>
+                  <input id="input">
+                </div>
+                <button class="btn" type="submit">Submit</button>
+              </form>
             </div>
-            <button class="btn" type="submit">Submit</button>
-          </form>
+          </div>
+          <div id="reminder">
+            <p>
+              Reminder: Numbers divisible by 3 become "ping," numbers divisible by 5 become "pong," numbers divisible by 15 become "ping-pong."
+            </p>
+          </div>
         </div>
-        <div id="result">
-        <h3>Here is your pin-pong rythm:</h3>
-        <ul class="results-list">
-        </ul>
-      </div>
+        <div class="col-xs-6 col-md-6">
+          <div id="rules">
+            <h3>How to Play:</h3>
+            <p>
+              Ping Pong will count up to your number starting with 1 with the following exceptions
+            </p>
+            <ul class="rules">
+              <li>Rule 1</li>
+              <li>Rule 2</li>
+              <li>Rule 3</li>
+            </ul>
+          </div>
+          <div id="result">
+            <h3>Here is your pin-pong rythm:</h3>
+            <ul class="results-list">
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </body>

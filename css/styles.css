@@ -1,3 +1,60 @@
+body {
+  background-color: #f2f2f2;
+}
+
+.container {
+  background-color: #ffffff;
+  width: 600px;
+  padding-bottom: 20px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+#rules {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid #f2f2f2;
+}
+
+#header {
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #e0290d;
+  padding-bottom:20px;
+}
+
+img {
+  width: 100%;
+}
+
 #result {
   display: none;
+}
+
+#program {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.btn {
+  background-color: #e0290d;
+  color: #ffffff;
+}
+
+#input {
+  background-color: #f2f2f2;
+  padding:3px;
+}
+
+#reminder {
+  display: none;
+  font-size: 12px;
+  text-align: left;
+  padding: 20px;
 }
