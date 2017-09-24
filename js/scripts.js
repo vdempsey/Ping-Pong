@@ -20,11 +20,11 @@ $(document).ready(function() {
     if (input % 1 !== 0) {
       alert("Enter an integer greater than zero!"); //in case the user disregards initial directions.
     } else {
-        for (var rangeIndex =0; rangeIndex <= input; rangeIndex++) {
-        var userResult = translate(rangeIndex);
-        $("ul").append("Testing");
-        $("#result").show();
+        for (var numberRange =1; numberRange <= input; numberRange++) {
+        var userResult = translate(numberRange);
+        $("ul.results-list").append("<li>" + translate(numberRange) + "</li>");
       }
+      $("#result").show();
     }
 
     //$("li").prepend($(".ping").text(userResult()));
