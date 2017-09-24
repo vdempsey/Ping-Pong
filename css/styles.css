@@ -17,6 +17,12 @@ body {
   border: 2px solid #f2f2f2;
 }
 
+ul.rules {
+  list-style-position: outside;
+  margin: 0;
+  padding: 20px;
+  padding-top: 10px;
+}
 #header {
   padding: 20px;
   text-align: center;
@@ -33,6 +39,11 @@ img {
 
 #result {
   display: none;
+  margin: 20px;
+  margin-top:30px;
+  padding: 20px;
+  background-color: #fce15a;
+  color: #333;
 }
 
 #program {
@@ -57,4 +68,13 @@ img {
   font-size: 12px;
   text-align: left;
   padding: 20px;
+  padding-left: 30px;
+}
+
+.btn:hover, .btn:focus, .btn.focus {
+  color: #f9d625;
+}
+
+ul.results-list {
+  padding-left: 80px;
 }

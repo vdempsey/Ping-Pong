@@ -14,12 +14,15 @@ function translate(input) {
 //user logic
 $(document).ready(function() {
   $("form#formPingPong").submit(function(event) {
-  //  event.preventDefault();
+    event.preventDefault();
     var input = parseFloat($("#input").val());
-    if (input % 1 !== 0) {
+    if (input % 1 !== 0 || input <= 0) {
       alert("Enter an integer greater than zero!"); //in case the user disregards initial directions.
+      $("#result").hide();
+      $("#rules").show();
+      $("#reminder").hide();
     } else {
-        $("ul.results-list").empty();
+        $("ul.results-list").empty();//clear previous list when the next number is submitted.
         for (var numberRange =1; numberRange <= input; numberRange++) {
         var userResult = translate(numberRange);
         $("ul.results-list").append("<li>" + translate(numberRange) + "</li>");
@@ -28,6 +31,5 @@ $(document).ready(function() {
       $("#reminder").show();
       $("#rules").hide();
     }
-      event.preventDefault();
   });
 });
