@@ -5,7 +5,8 @@
 #### By _**Valia Dempsey**_
 
 ### Description
-_The goal of this web page is to create an application, that converts certain numbers (see **logic section** of README) to words "ping," "pong," "ping-pong" and outputs number/ping-pong list or "Rythm" as I call it._
+_The goal of this web page is to create an application, that converts certain numbers (see **logic section** of README) to words "ping," "pong," "ping-pong" and outputs number/ping-pong list or "Rythm" as I call it.
+To view the page, go here: vdempsey.github.io/Ping-Pong_
 
 ### Logic to create Number/Ping-Pong Rythm.
 
